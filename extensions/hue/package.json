@@ -1,0 +1,57 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "hue",
+  "title": "Philips Hue",
+  "description": "Control Philips Hue lights.",
+  "icon": "icon.png",
+  "author": "cromatox",
+  "categories": [
+    "Other"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Philips Hue",
+      "description": "Control Philips Hue devices",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "bridge",
+      "type": "textfield",
+      "required": true,
+      "title": "Hue bridge",
+      "description": "HTTP Bridge IP or hostname",
+      "placeholder": "http://<IP>"
+    },
+    {
+      "name": "user",
+      "type": "textfield",
+      "required": true,
+      "title": "API user",
+      "description": "API user"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.38.3",
+    "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
